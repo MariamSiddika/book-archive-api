@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book Archive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="styles/book-arch.css">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/014b04c3df.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <section class="d-flex justify-content-between align-items-center">
+            <!-- logo -->
+            <img class="ms-4" height="100px" width="100px" src="image/logo1-removebg-preview.png" alt="">
+            <!-- input -->
+            <div class="input-group mb-3 px-4">
+                <input id="search-input" type="text" autocomplete="off" class="form-control fw-bold"
+                    placeholder="Search book store" aria-label="Search" aria-describedby="search-input">
+                <button class="btn btn-dark fw-bold" type="button" id="search-btn"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </section>
+
+    </header>
+    <main class="py-3">
+        <!-- total result counted -->
+        <div id="total-result" class="text-end fw-bold mb-4 container"></div>
+        <!-- searched book result-->
+        <section id="result" class="container">
+            <div id="book-container" class="row row-cols-1 row-cols-md-3 g-4 ">
+            </div>
+        </section>
+        <section>
+            <!-- no result -->
+            <div id="no-result" class="d-none d-flex align-items-center justify-content-center">
+                <h1>No Result Found. Try searching different text <i class="fa-regular fa-face-frown"></i></h1>
+            </div>
+        </section>
+        <section>
+            <!-- loader -->
+            <div id="loaderDiv" class="d-flex align-items-center d-none">
+                <span class="loader "></span>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="js/book-arch.js"></script>
+</body>
+
+</html>
